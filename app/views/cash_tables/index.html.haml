@@ -10,15 +10,15 @@
   %table.table.table-striped
     %thead
       %tr
-        %th{:scope => "col"} Cash in
-        %th{:scope => "col"} Cash out
+        %th{:scope => "col"} Status
+        %th{:scope => "col"} Amount
         %th{:scope => "col"} Total Cash
         %th{:scope => "col"} Date 
-      -@cashrecord.each do |record|
+      -@cashtable.each do |record|
         %tbody
           %tr
-            %td= record.cash_in
-            %td= record.cash_out
+            %td= record.cashrecord
+            %td= record.amount
             %td= record.total_cash
             %td= record.updated_at 
     

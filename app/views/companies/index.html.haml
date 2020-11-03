@@ -24,5 +24,9 @@
               = companie.initial_cash
             .text-center
               -# %a.btn.btn-primary.text-center{:href => "#"} Go somewhere
+              = link_to "Delete Company", company_path(companie.id), :method => :delete
+              %br
+              = link_to "Edit", edit_company_path(companie.id)
+              %br
               = link_to "Cash Table", company_cash_tables_path(companie.id)
 

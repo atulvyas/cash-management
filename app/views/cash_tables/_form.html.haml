@@ -1,12 +1,11 @@
-= form_for [@company, @cashrecord] do |f|
+= form_for [@company, @cashtable] do |f|
   .field
-    = f.label :Cash_Out
+    = f.label :Transacition
     %br/
-    = f.number_field :cash_out, autofocus: true
+    = f.select :cashrecord, CashTable.cashrecords
   .field
-    = f.label :Cash_In
+    = f.label :Amount
     %br/
-    = f.number_field :cash_in, autofocus: true
-  .field 
+    = f.number_field :amount
   .actions
-    = f.submit  
+    = f.submit "Add"

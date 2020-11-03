@@ -11,7 +11,7 @@ class CompaniesController < ApplicationController
   def create
     @company = current_user.companies.new(require_params)
     if @company.save
-      render 'index'
+      redirect_to companies_path
     else
       render 'new'
     end
@@ -21,9 +21,8 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    byebug
     if @company.update(require_params)
-      render 'index'
+      redirect_to companies_path
     else
       render 'edit'
     end
@@ -31,7 +30,7 @@ class CompaniesController < ApplicationController
 
   def destroy
     @company.destroy
-    redirect_to student_companies_path
+    redirect_to companies_path
   end
 
   private

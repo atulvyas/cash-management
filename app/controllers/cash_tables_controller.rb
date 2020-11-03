@@ -3,16 +3,16 @@ class CashTablesController < ApplicationController
 
 
   def index
-    @cashrecord = @company.cash_tables
+    @cashtable = @company.cash_tables
   end
 
   def new
-    @cashrecord = @company.cash_tables.new
+    @cashtable = @company.cash_tables.new
   end
 
   def create
-    @cashrecord = @company.cash_tables.new(require_params)
-    if @cashrecord.save
+    @cashtable = @company.cash_tables.new(require_params)
+    if @cashtable.save
       redirect_to company_cash_tables_path
     else
       render 'new'
@@ -41,6 +41,7 @@ class CashTablesController < ApplicationController
   end
 
   def require_params
-    params.require(:cash_table).permit(:cash_out, :cash_in)
+    params[:cash_table][:cashrecord] = params[:cash_table][:cashrecord].to_i 
+    params.require(:cash_table).permit(:cashrecord, :amount)
   end
 end

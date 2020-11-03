@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_03_063343) do
+ActiveRecord::Schema.define(version: 2020_11_03_142723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cash_tables", force: :cascade do |t|
-    t.integer "cash_out"
-    t.integer "cash_in"
     t.integer "total_cash"
     t.integer "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "cashrecord"
+    t.float "amount"
   end
 
   create_table "companies", force: :cascade do |t|
