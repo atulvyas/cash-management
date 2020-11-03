@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'rubocop'
 gem "haml-rails"
+gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'mini_racer'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

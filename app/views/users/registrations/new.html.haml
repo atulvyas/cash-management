@@ -1,21 +1,12 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "users/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+\%form
+\.form-group
+\%label{:for =&gt; "exampleInputEmail1"} Email address
+\%input#exampleInputEmail1.form-control{"aria-describedby" =&gt; "emailHelp", :placeholder =&gt; "Enter email", :type =&gt; "email"}/
+\%small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+\.form-group
+\%label{:for =&gt; "exampleInputPassword1"} Password
+\%input#exampleInputPassword1.form-control{:placeholder =&gt; "Password", :type =&gt; "password"}/
+\.form-group.form-check
+\%input#exampleCheck1.form-check-input{:type =&gt; "checkbox"}/
+\%label.form-check-label{:for =&gt; "exampleCheck1"} Check me out
+\%button.btn.btn-primary{:type =&gt; "submit"} Submit
