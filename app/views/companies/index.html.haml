@@ -1,1 +1,33 @@
-%h2 index
+%nav.navbar.navbar-light.bg-light
+  %a.navbar-brand 
+  %form.form-inline
+    = link_to "Sign out", destroy_user_session_path, method: :delete
+
+%br
+%center
+
+%button.btn.btn-primary{:type => "button"} Add More
+
+
+
+
+.container
+  .card-columns
+    .col-sm-4
+      - @companies.each do |companie|
+        .card.shadow{:style => "width: 15rem; height: 18rem;"}
+          .card-body
+            %h3.card-title.text-center= companie.name
+            %hr/
+            %p
+              %strong country :
+              = companie.country
+            %p
+              %strong current_cash :
+              = companie.current_cash
+            %p
+              %strong initial_cash :
+              = companie.initial_cash
+            .text-center
+              %a.btn.btn-primary.text-center{:href => "#"} Go somewhere
+

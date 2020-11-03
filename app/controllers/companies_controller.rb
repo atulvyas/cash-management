@@ -4,8 +4,7 @@ class CompaniesController < ApplicationController
   end
 
   def index
-    student = Student.find_by(id: params[:student_id])
-    @company = student.companies
+    @companies = current_user.companies
   end
 
 end
