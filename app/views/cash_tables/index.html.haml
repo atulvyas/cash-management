@@ -1,0 +1,15 @@
+= link_to "Add Record", new_company_cash_table_path
+
+-@cashrecord.each do |record|
+  %p
+    %strong Cash in :
+    = record.cash_in
+  %p
+    %strong Cash out :
+    = record.cash_out
+  %p
+    %strong Total Cash :
+    = record.total_cash   
+  %p
+    %strong Date :
+    = record.updated_at  

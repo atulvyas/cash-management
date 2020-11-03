@@ -1,0 +1,12 @@
+= form_for [@company, @cashrecord] do |f|
+  .field
+    = f.label :Cash_Out
+    %br/
+    = f.number_field :cash_out, autofocus: true
+  .field
+    = f.label :Cash_In
+    %br/
+    = f.number_field :cash_in, autofocus: true
+  .field 
+  .actions
+    = f.submit  

@@ -7,7 +7,7 @@
 %center
 
 %button.btn.btn-primary{:type => "button"} Add More
-
+= link_to "Add company", new_company_path
 
 
 
@@ -29,5 +29,6 @@
               %strong initial_cash :
               = companie.initial_cash
             .text-center
-              %a.btn.btn-primary.text-center{:href => "#"} Go somewhere
+              -# %a.btn.btn-primary.text-center{:href => "#"} Go somewhere
+              = link_to "Cash Table", company_cash_tables_path(companie.id)
 

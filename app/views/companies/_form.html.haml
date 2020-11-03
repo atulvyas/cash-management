@@ -1,0 +1,11 @@
+= form_for @company do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name, autofocus: true, autocomplete: "Name"
+  .field
+    = f.label :country
+    %br/
+    = f.text_field :country, autofocus: true, autocomplete: "Country"
+  .actions
+    = f.submit  
