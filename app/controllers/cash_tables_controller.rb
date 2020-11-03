@@ -1,0 +1,2 @@
+class CashTablesController < ApplicationController
+end
