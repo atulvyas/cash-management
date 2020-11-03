@@ -2,6 +2,7 @@ class Student::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   def create
     params[:user] = params[:user]&.merge(type: 'Student')
+    super
   end
 
   protected
