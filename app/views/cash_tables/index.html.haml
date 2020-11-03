@@ -1,15 +1,24 @@
 = link_to "Add Record", new_company_cash_table_path
 
--@cashrecord.each do |record|
-  %p
-    %strong Cash in :
-    = record.cash_in
-  %p
-    %strong Cash out :
-    = record.cash_out
-  %p
-    %strong Total Cash :
-    = record.total_cash   
-  %p
-    %strong Date :
-    = record.updated_at  
+%br
+%br
+%center
+  %h3 Cash Deposit
+
+.container
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th{:scope => "col"} Cash in
+        %th{:scope => "col"} Cash out
+        %th{:scope => "col"} Total Cash
+        %th{:scope => "col"} Date 
+      -@cashrecord.each do |record|
+        %tbody
+          %tr
+            %td= record.cash_in
+            %td= record.cash_out
+            %td= record.total_cash
+            %td= record.updated_at 
+    

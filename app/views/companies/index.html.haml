@@ -2,15 +2,9 @@
   %a.navbar-brand 
   %form.form-inline
     = link_to "Sign out", destroy_user_session_path, method: :delete
-
 %br
 %center
-
-%button.btn.btn-primary{:type => "button"} Add More
 = link_to "Add company", new_company_path
-
-
-
 .container
   .card-columns
     .col-sm-4
