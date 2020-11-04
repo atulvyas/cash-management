@@ -6,6 +6,7 @@
   .field
     = f.label :Amount
     %br/
-    = f.number_field :amount
+    = f.text_field :amount, onkeyup: "verifyAmount(this)"
   .actions
     = f.submit "Add"
+

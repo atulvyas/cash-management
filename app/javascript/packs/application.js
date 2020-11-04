@@ -20,3 +20,4 @@ require("channels")
 //= require bootstrap
 import "bootstrap"
 import "../stylesheets/application"
+

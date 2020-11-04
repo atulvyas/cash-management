@@ -1,0 +1,5 @@
+%nav.navbar.navbar-light.bg-light
+  %a.navbar-brand 
+  %form.form-inline
+    = link_to "Sign out", destroy_user_session_path, method: :delete
+%br

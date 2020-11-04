@@ -9,6 +9,8 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = yield
+    - flash.each do |name, msg|
+      = msg
 
 
 

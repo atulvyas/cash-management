@@ -2,10 +2,10 @@
   .field
     = f.label :name
     %br/
-    = f.text_field :name, autofocus: true, autocomplete: "Name"
+    = f.text_field :name, autofocus: true, autocomplete: "Name",required: true 
   .field
     = f.label :country
     %br/
-    = f.text_field :country, autofocus: true, autocomplete: "Country"
+    = f.text_field :country, autofocus: true, autocomplete: "Country",required: true 
   .actions
     = f.submit  
