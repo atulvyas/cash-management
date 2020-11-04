@@ -27,6 +27,7 @@ gem "haml-rails"
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'mini_racer'
 gem 'country_select'
+gem "letter_opener"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
