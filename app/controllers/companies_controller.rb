@@ -33,6 +33,10 @@ class CompaniesController < ApplicationController
     redirect_to companies_path
   end
 
+  # for teacher
+  def dashboard
+  end
+
   private
   def find_user
     @company = current_user.companies.find(params[:id])

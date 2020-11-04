@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     if resource.is_a?(Student)
       companies_path
     elsif resource.is_a?(Teacher)
-      new_teacher_user_session_path
+      dashboard_path
     else
       super
     end

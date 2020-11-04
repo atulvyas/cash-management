@@ -10,11 +10,10 @@ Rails.application.routes.draw do
 
   # teachers
   devise_for :users, path: 'teachers', controllers: { registrations: 'teacher/registrations', confirmations: 'confirmations'}, as: 'teacher'
-
+  get 'dashboard', to: 'companies#dashboard'
 
   devise_scope :user do
-    root to: "devise/sessions#new"
-   
+    root to: "devise/sessions#new" 
   end
 
 end
