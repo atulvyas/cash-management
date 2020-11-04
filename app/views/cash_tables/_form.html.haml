@@ -1,12 +1,14 @@
 = form_for [@company, @cashtable] do |f|
+  - if @cashtable.errors.present?
+    = @cashtable.errors.full_messages
   .field
     = f.label :Transacition
     %br/
-    = f.select :cashrecord, CashTable.cashrecords
+    = f.select :cashrecord, CashTable::cashrecords
   .field
     = f.label :Amount
     %br/
-    = f.text_field :amount, onkeyup: "verifyAmount(this)"
+    = f.number_field :amount, step: :any
   .actions
     = f.submit "Add"
 
