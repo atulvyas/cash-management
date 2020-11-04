@@ -5,7 +5,7 @@
   .card-columns
     .col-sm-4
       - @companies.each do |companie|
-        .card.shadow{:style => "width: 15rem; height: 18rem;"}
+        .card.shadow{:style => "width: 15rem; height: auto;"}
           .card-body
             %h3.card-title.text-center= companie.name
             %hr/

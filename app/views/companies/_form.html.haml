@@ -2,10 +2,10 @@
   .field
     = f.label :name
     %br/
-    = f.text_field :name, autofocus: true, autocomplete: "Name",required: true 
+    = f.text_field :name, autofocus: true, autocomplete: "Name",required: true, pattern: "[a-zA-Z0-9_.- ]*"
   .field
     = f.label :country
     %br/
-    = f.text_field :country, autofocus: true, autocomplete: "Country",required: true 
+    = f.country_select :country, autofocus: true, autocomplete: "Country",required: true 
   .actions
     = f.submit  
