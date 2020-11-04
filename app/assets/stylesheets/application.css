@@ -14,3 +14,13 @@
  *= require_self
  */
 @import "bootstrap";
+
+.card-columns2 {
+    -moz-column-count: 3;
+    column-count: 4 !important; 
+    grid-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+}
