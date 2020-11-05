@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap";
 
 .card-columns2 {
     -moz-column-count: 3;
