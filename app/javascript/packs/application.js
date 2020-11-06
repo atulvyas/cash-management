@@ -19,5 +19,5 @@ require("channels")
 //= require popper
 //= require bootstrap
 import "bootstrap"
-import "../stylesheets/application"
+import "./stylesheets/application.scss"
 
